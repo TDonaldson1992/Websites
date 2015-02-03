@@ -1,0 +1,55 @@
+body {
+    height: 100%;
+    width: 100%;
+}
+
+table {
+    height: 100%;
+    width: 100%;
+}
+
+.game {
+    height: 0;
+    width: 100%;
+    visibility: hidden;   
+}
+
+.game table {
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+}
+
+table .guess
+{
+    width: 50%;
+}
+
+table .choices
+{
+    width: 50%;
+}
+
+.t1, .t2, .t3, .t4, .t5, 
+.t6, .t7, .t8, .t9 {
+    visibility: hidden;
+}
+
+.tiles_won {
+    width: 0;
+    visibility: hidden;
+}
+
+.CongratsImg {
+    width: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.TblBorder_BlackGroove, .TblBorder_BlackGroove td {
+    border-width: 2px;
+    border-style: groove;
+    border-color: black;
+    border-collapse: collapse;
+}

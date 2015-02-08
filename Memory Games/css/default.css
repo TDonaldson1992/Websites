@@ -1,7 +1,3 @@
-html {
-    overflow: hidden;   
-}
-
 body {
     background-color: #CCFFFF; 
     height: 100%; 
@@ -30,14 +26,13 @@ body {
 }
 
 .game_menu {
-    visibility: hidden;
+    visibility: visible;
     height: 0;
-}
-
-.game_table {
-    visibility: hidden;
-    width: 100%;
-    height: 100%;
+	width: 0;
+	background-image:url('../images/title_banner_only.png');  
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: '0 0';
 }
 
 .letters_menu_button {

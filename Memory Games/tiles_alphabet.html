@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/game.css" />
+        <link rel="stylesheet" type="text/css" href="css/shake.css" />
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+        
+        <script type="text/javascript" src="js/custom_fade.js"></script>
+        <script type="text/javascript" src="js/start.js"></script>
+        <script type="text/javascript" src="js/gametypeselector_alphabet.js"></script>
+        <script type="text/javascript" src="js/gametypeselector_alphabet.js"></script>
+        <script type="text/javascript" src="js/tiles_alphabet.js"></script>
+    </head>
+    
+    <body style="height: 100%; width: 100%;">
+        <table style="margin: auto; width: 90%; height: 90%;">
+            <tr valign="top">
+                <td class="tiles_won">
+                    <img src="images/congrats.png" alt="Congratulations!" class="CongratsImg"
+						onclick="window.top.location.reload();"></img>
+                </td>
+                
+                <td class="choices">
+                    <table class="TblBorder_BlackGroove">
+                        <tr valign="center" align="middle">
+                            <td>
+                                <img src="images/alphabet/h.png" 
+                                     onclick="tiles_alphabet_fadeOut(this, 8, 0)">
+                                </img>
+                            </td>
+                            <td>
+                                <img src="images/alphabet/b.png"
+                                     onclick="tiles_alphabet_fadeOut(this, 2, 1)">
+                                </img>
+                            </td>
+                            <td>
+                                <img src="images/alphabet/e.png"
+                                     onclick="tiles_alphabet_fadeOut(this, 5, 2)">
+                                </img>
+                            </td>
+                        </tr>
+                        <tr valign="center" align="middle">
+                            <td>
+                                <img src="images/alphabet/f.png"
+                                     onclick="tiles_alphabet_fadeOut(this, 6, 3)">
+                                </img>
+                            </td>
+                            <td>
+                                <img src="images/alphabet/d.png"
+                                     onclick="tiles_alphabet_fadeOut(this, 4, 4)">
+                                </img>
+                            </td>
+                            <td>
+                                <img src="images/alphabet/i.png"
+                                     onclick="tiles_alphabet_fadeOut(this, 9, 5)">
+                                </img>
+                            </td>
+                        </tr>
+                        <tr valign="center" align="middle">
+                            <td>
+                                <img src="images/alphabet/g.png" 
+                                     onclick="tiles_alphabet_fadeOut(this, 7, 6)">
+                                </img>
+                            </td>
+                            <td>
+                                <img src="images/alphabet/a.png"
+                                     onclick="tiles_alphabet_fadeOut(this, 1, 7)">
+                                </img>
+                            </td>
+                            <td>
+                                <img src="images/alphabet/c.png"
+                                     onclick="tiles_alphabet_fadeOut(this, 3, 8)">
+                                </img>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+
+                <td class="guess">
+                    <table>
+                        <tr valign="center" align="middle">
+                            <td class="t1">
+                                <img src="images/alphabet/a.png"></img>
+                            </td>
+                            <td class="t2">
+                                <img src="images/alphabet/b.png"></img>
+                            </td>
+                            <td class="t3">
+                                <img src="images/alphabet/c.png"></img>
+                            </td>
+                        </tr>
+                        <tr valign="center" align="middle">
+                            <td class="t4">
+                                <img src="images/alphabet/d.png"></img>
+                            </td>
+                            <td class="t5">
+                                <img src="images/alphabet/e.png"></img>
+                            </td>
+                            <td class="t6">
+                                <img src="images/alphabet/f.png"></img>
+                            </td>
+                        </tr>
+                        <tr valign="center" align="middle">
+                            <td class="t7">
+                                <img src="images/alphabet/g.png"></img>
+                            </td>
+                            <td class="t8">
+                                <img src="images/alphabet/h.png"></img>
+                            </td>
+                            <td class="t9">
+                                <img src="images/alphabet/i.png"></img>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

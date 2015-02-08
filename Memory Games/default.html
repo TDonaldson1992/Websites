@@ -2,18 +2,18 @@
     <head>
         <title>Memory Games</title>
         
-        <link rel="stylesheet" type="text/css" href="/css/default.css" />
-        <link rel="stylesheet" type="text/css" href="/css/button.css" />
-        <link rel="stylesheet" type="text/css" href="/css/gamemode.css" />
-        <link rel="stylesheet" type="text/css" href="/css/game.css" />
+        <link rel="stylesheet" type="text/css" href="css/default.css" />
+        <link rel="stylesheet" type="text/css" href="css/button.css" />
+        <link rel="stylesheet" type="text/css" href="css/gamemode.css" />
+        <link rel="stylesheet" type="text/css" href="css/game.css" />
         
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         
-        <script type="text/javascript" src="/js/custom_fade.js"></script>
-        <script type="text/javascript" src="/js/start.js"></script>
-        <script type="text/javascript" src="/js/tiles_numbers.js"></script>
-        <script type="text/javascript" src="/js/gametypeselector_alphabet.js"></script>
-        <script type="text/javascript" src="/js/gametypeselector_numbers.js"></script>
+		<script type="text/javascript" src="js/custom_fade.js"></script>
+		<script type="text/javascript" src="js/start.js"></script>
+        <script type="text/javascript" src="js/tiles_numbers.js"></script>
+        <script type="text/javascript" src="js/gametypeselector_alphabet.js"></script>
+        <script type="text/javascript" src="js/gametypeselector_numbers.js"></script>
         
         <style>
             .title {
@@ -25,13 +25,9 @@
                 width: 100%;
                 display: table;
             }
+			
+			
         </style>
-        
-        <script>
-            $(document).ready(function() {
-                $('.game_menu').load("/html/game_menu_table.html");
-            });
-        </script>
         
         <script>
             function resizeIframe(obj) {
@@ -58,13 +54,84 @@
                     </div>
                         
                     <div class="game_menu">
+						<table class="game_table">
+							<tbody>
+								<tr>
+									<td>&nbsp;</td>
+									<td align="center">
+										<img class="numbers_menu_button"  
+											src="images/numbers_menu.png" 
+											onclick="startNumbers()">
+										</img>
+									</td>
+									<td align="center">
+									<img class="letters_menu_button" 
+										src="images/letters_menu.png" 
+										onclick="startLetters()"></img>
+									</td>
+									<td>&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
                     </div>
     
                     <div class="mode_selector_menu">
+						<table class="mode_selector_table_alphabet">
+							<tbody>
+								<tr>
+									<td align="center">
+										<img class="flip_menu_button_alphabet" 
+											src="images/flip.png" 
+											onclick="startFlip_Alphabet()"></img>
+									</td>
+            
+									<td align="center">
+										<img class="arrange_menu_button_alphabet" 
+											src="images/arrange.png" 
+											onclick="startArrange_Alphabet()"></img>
+									</td>
+
+									<td align="center">
+										<img class="tile_menu_button_alphabet" 
+											src="images/tiles.png" 
+											onclick="startTiles_Alphabet()"></img>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						
+						<table class="mode_selector_table_numbers">
+							<tbody>
+								<tr>
+									<td align="center">
+										<img class="flip_menu_button_numbers" 
+											src="images/flip.png" 
+											onclick="startFlip_Numbers()"></img>
+									</td>
+
+									<td align="center">
+										<img class="arrange_menu_button_numbers" 
+											src="images/arrange.png" 
+											onclick="startArrange_Numbers()"></img>
+									</td>
+
+									<td align="center">
+										<img class="tile_menu_button_numbers" 
+											src="images/tiles.png" 
+											onclick="startTiles_Numbers()"></img>
+									</td>
+								</tr>
+							</tbody>
+						</table>
                     </div>
 
-                    <iframe scrolling="no" seamless="seamless" class="game" 
-                            src="html/tiles_numbers.html" align="left" style="margin: auto;"
+                    <iframe scrolling="no" seamless="seamless" class="game_tiles_numbers" 
+                            src="tiles_numbers.html" align="left" style="margin: auto;"
+                            frameborder="0">
+                    </iframe>
+					
+					<iframe scrolling="no" seamless="seamless" class="game_tiles_alphabet" 
+                            src="tiles_alphabet.html" align="left" style="margin: auto;"
                             frameborder="0">
                     </iframe>
                 </td>

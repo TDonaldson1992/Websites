@@ -23,8 +23,8 @@
                 background-size: contain;
                 height: 100%;
                 width: 100%;
-                display: table;
-            }
+				border: 2px solid black;
+			}
 			
 			
         </style>
@@ -43,7 +43,7 @@
                     <img src="images/topbanner.png" width="100%" height="80%" />
                 </td>
             </tr>
-            <tr style="height: 50%">
+            <tr style="height: 50%;">
                 <td valign="bottom" align="middle">
                     <div class="title">
                         <section class="gradient">
@@ -88,12 +88,6 @@
 									<td align="center">
 										<img class="arrange_menu_button_alphabet" 
 											src="images/arrange.png" 
-											onclick="startArrange_Alphabet()"></img>
-									</td>
-
-									<td align="center">
-										<img class="tile_menu_button_alphabet" 
-											src="images/tiles.png" 
 											onclick="startTiles_Alphabet()"></img>
 									</td>
 								</tr>
@@ -112,26 +106,22 @@
 									<td align="center">
 										<img class="arrange_menu_button_numbers" 
 											src="images/arrange.png" 
-											onclick="startArrange_Numbers()"></img>
-									</td>
-
-									<td align="center">
-										<img class="tile_menu_button_numbers" 
-											src="images/tiles.png" 
 											onclick="startTiles_Numbers()"></img>
 									</td>
+
+
 								</tr>
 							</tbody>
 						</table>
                     </div>
 
                     <iframe scrolling="no" seamless="seamless" class="game_tiles_numbers" 
-                            src="tiles_numbers.html" align="left" style="margin: auto;"
+                            src="tiles_numbers.html" align="left" style="margin: auto; background-color: #CCFFFF;"
                             frameborder="0">
                     </iframe>
 					
 					<iframe scrolling="no" seamless="seamless" class="game_tiles_alphabet" 
-                            src="tiles_alphabet.html" align="left" style="margin: auto;"
+                            src="tiles_alphabet.html" align="left" style="margin: auto; background-color: #CCFFFF;"
                             frameborder="0">
                     </iframe>
                 </td>

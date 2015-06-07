@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" href="CSS/index.css">
+
+		<title>Kill Death Calculator</title>
+	</head>
+
+	<body ng-app="KillDeath">
+		<div ng-controller="KillDeathListController as kdList">
+			<table class="table-bordered table-striped" style="width: 25%">
+				<thead>
+					<th style="width: 25px; height: 25px;"></th>
+					<th class="tblCenter">ID</th>
+					<th class="tblCenter">Kills</th>
+					<th class="tblCenter">Deaths</th>
+					<th class="tblCenter">Ratio</th>
+				</thead>
+
+				<tbody>
+					<tr class="tblCenter" ng-repeat="stat in kdList.stats">
+						<td style="width: 25px; height: 25px; padding: 3px;">
+							<button class="btn-primary btn-sm">
+								<span class="glyphicon glyphicon-pencil"></span>
+							</button>
+						</td>
+						<td>{{ stat.id }}</td>
+						<td>{{ stat.kills }}</td>
+						<td>{{ stat.deaths }}</td>
+						<td>{{ stat.kills / stat.deaths  | number : 3 }}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div ng-controller="KillDeathPostController as kdPost">
+			<form class="form-horizontal">
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Kills:</label>
+					<div class="col-sm-10">
+						<input type="number" ng-model="kdPost.newKills">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Deaths:</label>
+					<div class="col-sm-10">
+						<input type="number" ng-model="kdPost.newDeaths">
+					</div>
+				</div>
+
+				<button class="btn btn-success" ng-click="kdPost.addStat(kdPost.newKills, kdPost.newDeaths)">
+					<span class="glyphicon glyphicon-save"></span> Add Stat
+				</button>
+			</form>
+		</div>
+
+		<!-- Angular Scripts -->
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-cookies.min.js"></script>
+
+		<!-- Services -->
+		<script type="text/javascript" src="JS/Services/KillDeathService.js"></script>
+		
+		<!-- Controllers -->
+		<script type="text/javascript" src="JS/Controllers/KillDeathListController.js"></script>
+		<script type="text/javascript" src="JS/Controllers/KillDeathPostController.js"></script>
+		<script type="text/javascript" src="JS/Controllers/KillDeathCookieController.js"></script>
+	</body>
+</html>

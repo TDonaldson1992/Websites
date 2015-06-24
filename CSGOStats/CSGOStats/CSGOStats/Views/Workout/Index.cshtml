@@ -1,0 +1,45 @@
+﻿@using CSGOStats.ViewModels;
+@model WorkoutListViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Kills</th>
+                <th>Assists</th>
+                <th>Deaths</th>
+                <th>Weight</th>
+                <th>Completed</th>
+                <th>Date Completed</th>
+            </tr>
+
+            @foreach (WorkoutViewModel item in Model.Workouts)
+            {
+                <tr>
+                    <td>@item.WorkoutID</td>
+                    <td>@item.WorkoutName</td>
+                    <td>@item.Kills</td>
+                    <td>@item.Assists</td>
+                    <td>@item.Deaths</td>
+                    <td>@item.Weight</td>
+                    <td>@item.Completed</td>
+                    <td>@item.DateCompleted</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

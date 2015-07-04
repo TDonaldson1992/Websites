@@ -1,5 +1,4 @@
 ﻿using CSGOStats.DataAccessLayer;
-using CSGOStats.Filters;
 using CSGOStats.Models;
 using CSGOStats.ViewModels;
 using System;
@@ -12,10 +11,9 @@ namespace CSGOStats.Controllers
 {
     public class WorkoutController : Controller
     {
-        [FooterFilter]
-        public ActionResult Index()
+        public ActionResult ManageWorkouts()
         {
-            string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["DatabaseManager"].ConnectionString;
+            string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["LocalSqlServer"].ConnectionString;
             WorkoutListViewModel workoutListViewModel = new WorkoutListViewModel();
             DatabaseManager dm = new DatabaseManager(connectionString);
 
@@ -39,7 +37,7 @@ namespace CSGOStats.Controllers
 
             workoutListViewModel.Workouts = workoutViewModels;
 
-            return View("Index", workoutListViewModel);
+            return View("ManageWorkouts", workoutListViewModel);
         }
     }
 }

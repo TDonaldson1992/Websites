@@ -1,0 +1,11 @@
+﻿body {
+    background-color: #141414;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.Welcome {
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 45px;
+    text-align: center;
+}

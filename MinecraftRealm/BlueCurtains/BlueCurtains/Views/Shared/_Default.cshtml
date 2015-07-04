@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @RenderSection("HeaderSection", false)
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+
+    <link rel="stylesheet" type="text/css" href="~/Content/default.css" />
+
+    <script src="~/Scripts/custom/bodyresize.js"></script>
+</head>
+<body>
+    @Html.Partial("~/Views/Shared/_Menu.cshtml")
+
+    <div>
+        @RenderBody()
+
+        @RenderSection("BodySection")
+    </div>
+
+    
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>
+

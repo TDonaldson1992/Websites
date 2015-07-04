@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="csgoworkout.com" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^G:\\Github\\Websites\\CSGOStats\\CSGOStats\\CSGOStats\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^G:\\Github\\Websites\\CSGOStats\\CSGOStats\\CSGOStats\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="LocalSqlServer-Web.config Connection String" description="LocalSqlServer Connection String used in web.config by the application to access the database." value="data source=.\SQLEXPRESS;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|aspnetdb.mdf;User Instance=true" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="G:\\Github\\Websites\\CSGOStats\\CSGOStats\\CSGOStats\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='LocalSqlServer']/@connectionString" />
+  </parameter>
+</parameters>

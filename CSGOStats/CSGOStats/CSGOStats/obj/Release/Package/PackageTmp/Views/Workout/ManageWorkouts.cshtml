@@ -1,0 +1,38 @@
+﻿@using CSGOStats.ViewModels;
+@model WorkoutListViewModel
+
+@{
+    Layout = "~/Views/Shared/_Default.cshtml";
+    ViewBag.Title = "View Workouts";
+}
+
+@section BodySection {
+    <div class="BodyContent">
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Kills</th>
+                <th>Assists</th>
+                <th>Deaths</th>
+                <th>Weight</th>
+                <th>Completed</th>
+                <th>Date Completed</th>
+            </tr>
+
+            @foreach (WorkoutViewModel item in Model.Workouts)
+            {
+                <tr>
+                    <td>@item.WorkoutID</td>
+                    <td>@item.WorkoutName</td>
+                    <td>@item.Kills</td>
+                    <td>@item.Assists</td>
+                    <td>@item.Deaths</td>
+                    <td>@item.Weight</td>
+                    <td>@item.Completed</td>
+                    <td>@item.DateCompleted</td>
+                </tr>
+            }
+        </table>
+    </div>
+}
